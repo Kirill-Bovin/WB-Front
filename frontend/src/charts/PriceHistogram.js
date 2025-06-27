@@ -18,6 +18,6 @@ const PriceHistogram = ({ products }) => {
     const histogramData = Array.from(histogramMap.entries())
         .map(([range, count]) => ({ range, count }))
         .sort((a, b) => parseInt(a.range.split("–")[0]) - parseInt(b.range.split("–")[0]));
-    return (_jsxs("div", { className: "p-4", style: { width: "100%", height: 300 }, children: [_jsx("h2", { className: "text-lg font-semibold mb-2", children: "\u0413\u0438\u0441\u0442\u043E\u0433\u0440\u0430\u043C\u043C\u0430 \u0446\u0435\u043D" }), _jsx(ResponsiveContainer, { width: "100%", height: "100%", children: _jsxs(BarChart, { data: histogramData, children: [_jsx(CartesianGrid, { strokeDasharray: "3 3" }), _jsx(XAxis, { dataKey: "range" }), _jsx(YAxis, {}), _jsx(Tooltip, {}), _jsx(Bar, { dataKey: "count", fill: "#8884d8" })] }) })] }));
+    return (_jsxs("div", { className: "p-4", style: { width: "100%", height: 300 }, children: [_jsx("h2", { className: "text-lg font-semibold mb-2", children: "\u0413\u0438\u0441\u0442\u043E\u0433\u0440\u0430\u043C\u043C\u0430 \u0446\u0435\u043D" }), _jsx(ResponsiveContainer, { width: "100%", height: "100%", children: _jsxs(BarChart, { data: histogramData, margin: { bottom: 30 }, children: [_jsx(CartesianGrid, { strokeDasharray: "3 3" }), _jsx(XAxis, { dataKey: "range" }), _jsx(YAxis, {}), _jsx(Tooltip, {}), _jsx(Bar, { dataKey: "count", fill: "#8884d8" })] }) })] }));
 };
 export default PriceHistogram;

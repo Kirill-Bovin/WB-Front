@@ -43,7 +43,7 @@ const PriceHistogram: React.FC<Props> = ({ products }) => {
     <div className="p-4" style={{ width: "100%", height: 300 }}>
       <h2 className="text-lg font-semibold mb-2">Гистограмма цен</h2>
       <ResponsiveContainer width="100%" height="100%">
-        <BarChart data={histogramData}>
+        <BarChart data={histogramData} margin={{ bottom: 30 }}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="range" />
           <YAxis />

@@ -22,7 +22,6 @@ const ProductDashboard = () => {
         })
             .then((res) => res.json())
             .then(() => {
-            // Ждём немного, чтобы фоновые задачи успели начать/завершиться
             const retries = 10;
             const delay = 2000; // 2 сек
             let attempts = 0;
