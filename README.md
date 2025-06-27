@@ -12,9 +12,17 @@
 
 ## Запуск проекта
 
+Создайте файл .env в WB+Front/backend
+* cd WB+Front/backend
+* touch .env
+```
+DATABASE_URL=postgresql+asyncpg://admindb:db123@db:5432/wbdb
+SYNC_DATABASE_URL=postgresql+psycopg2://admindb:db123@db:5432/wbdb
+```
+
 ```bash
  git clone https://github.com/Kirill-Bovin/WB-Front.git
- cd WB-Front
+ cd WB+Front
  docker compose up --build
 ```
 
