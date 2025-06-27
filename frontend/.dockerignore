@@ -1,0 +1,32 @@
+# Общие
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# Git
+.git
+.gitignore
+
+# Python env
+.venv
+env/
+venv/
+
+# Node
+node_modules
+dist
+build
+
+# IDE и редакторы
+.vscode
+.idea
+
+# Docker
+Dockerfile*
+.dockerignore
+
+# Секреты
+.env
+.env.*

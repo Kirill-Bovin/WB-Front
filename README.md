@@ -11,20 +11,29 @@
 * **DevOps:** Docker, Docker Compose, Poetry
 
 ## Запуск проекта
-
-Создайте файл .env в WB+Front/backend
+```bash
+ git clone https://github.com/Kirill-Bovin/WB-Front.git
+ 
+ Создайте файл .env в WB+Front/backend
 * cd WB+Front/backend
 * touch .env
+```
+Вставьте сл. текст в .env:
 ```
 DATABASE_URL=postgresql+asyncpg://admindb:db123@db:5432/wbdb
 SYNC_DATABASE_URL=postgresql+psycopg2://admindb:db123@db:5432/wbdb
 ```
-
-```bash
- git clone https://github.com/Kirill-Bovin/WB-Front.git
- cd WB+Front
+Возвращаемся в корень проекта
+```
+ cd ..
+```
+И запускаем докер
+```
  docker compose up --build
 ```
+
+
+
 
 * Backend: [http://localhost:8000](http://localhost:8000)
 * Frontend: [http://localhost](http://localhost)
@@ -40,9 +49,9 @@ SYNC_DATABASE_URL=postgresql+psycopg2://admindb:db123@db:5432/wbdb
 *  Парсинг Wildberries по ключевым словам
 *  Графики: цены, скидки, отзывы
 *  Фильтрация по цене, рейтингу, кол-ву отзывов
-*  Фоновый парсинг по расписанию (Celery)
+*  Расширяемость(Фоновый парсинг по расписанию (Celery))
 
-##  Миграции вручную
+##  Миграции вручную(Если вдруг не сработали автоматически)
 
 ```bash
  docker compose exec backend poetry run alembic revision --autogenerate -m "create products table"
