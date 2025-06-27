@@ -11,14 +11,21 @@
 * **DevOps:** Docker, Docker Compose, Poetry
 
 ## Запуск проекта
-```bash
- git clone https://github.com/Kirill-Bovin/WB-Front.git
- 
- Создайте файл .env в WB+Front/backend
-* cd WB+Front/backend
-* touch .env
+Скопируйте проект
 ```
-Вставьте сл. текст в .env:
+ git clone https://github.com/Kirill-Bovin/WB-Front.git
+```
+
+ Создайте 2 файла .env один в корне WB-Front, другой в WB-Front/backend
+```
+в корне проекта WB-Front
+touch .env
+
+cd backend
+touch .env
+```
+
+В оба файла вставьте сл. текст в .env:
 ```
 DATABASE_URL=postgresql+asyncpg://admindb:db123@db:5432/wbdb
 SYNC_DATABASE_URL=postgresql+psycopg2://admindb:db123@db:5432/wbdb
